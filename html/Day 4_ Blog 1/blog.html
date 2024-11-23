@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout Example</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+        integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script>
+        $(function () {
+            $('#header').load('components/header.html');
+
+        });
+    </script>
+
+<script>
+    function submitValue() {
+      // Get the value entered by the user
+      var input = document.getElementById('value-input');
+      var value = input.value;
+      
+      // Store the value in localStorage
+      localStorage.setItem('myValue', value);
+      
+      // Redirect to the second page
+      window.location.href = 'about.html';
+    }
+  </script>
+
+
+</head>
+
+
+<body>
+    <div id="header"></div>
+    <h1>Page 1</h1>
+    <p>Enter a value:</p>
+    <textarea id="value-input"> </textarea>
+    <button onclick="submitValue()">Submit</button>
+</body>
+</html>

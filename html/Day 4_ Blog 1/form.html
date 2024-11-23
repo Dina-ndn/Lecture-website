@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout Example</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+        integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script>
+        $(function () {
+            $('#header').load('components/header.html');
+
+        });
+    </script>
+
+
+</head>
+
+<body>
+    <div id="header"></div>
+
+    <aside>
+        <h2>aside</h2>
+        <img src="images/Screenshot_2022-01-30_at_3.21.50_PM_1500x.avif" alt="aside">
+    </aside>
+    <article>
+        <form action="https://codingdodo.com/" method="post">
+            <label for="fname">First name:</label>
+            <input type="text" name="fname" maxlength="20" size="20" minlength="8" />
+            <br>
+            <label for="lname">Last name:</label>
+            <input type="text" name="lname" required />
+            <br>
+            <label for="password">Password:</label>
+            <input type="password" name="password" maxlength="20" minlength="5"
+                pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{5,20}"
+                title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
+                required />
+            <br>
+            <label for="groupnum">Group:</label><br>
+            <input type="number" name="groupnum" id="groupnum" min="1" max="20" required />
+            <br>
+            <label for="dob">Birthday:</label>
+
+            <input type="date" id="dob" name="dob" value="2018-07-22" min="2018-01-01" max="2018-12-31">
+            <br>
+            <label for="fb">FB Profile:</label>
+            <input type="url" name="fb" id="fb" />
+            <br>
+            <input type="checkbox" name="sub" value="on"> Maths
+            <input type="checkbox" name="sub" value="on" checked> Physics
+            <br>
+            <input type="radio" name="subject" value="maths"> Maths
+            <input type="radio" name="subject" value="physics"> Physics
+            <br>
+            <label for="browser">Choose your browser from the list:</label>
+            <input list="browsers" name="browser" id="browser" size=”10vw”>
+            <datalist id="browsers">
+                <option value="Edge">
+                <option value="Firefox">
+                <option value="Chrome">
+                <option value="Opera">
+                <option value="Safari">
+            </datalist>
+
+            <input type="checkbox" name="ToA" value="ToA" class="ToA"> I agree this term of agreement.
+
+            <input type="submit" name="ok" value="Sign In" />
+        </form>
+
+    </article>
+    <footer>
+        <h2> Site Map </h2>
+    </footer>
+</body>
+
+</html>

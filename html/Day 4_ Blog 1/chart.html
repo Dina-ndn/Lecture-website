@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout Example</title>
+    <script src="https://www.gstatic.com/charts/loader.js">
+
+    </script>
+<!-- comment -->
+<link rel="stylesheet" href="css/styles.css">
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <div class="topnav" id="myTopnav">
+            <a href="#home" class="active">Home</a>
+            <a href="#news">News</a>
+            <a href="#contact">Contact</a>
+            <a href="#about">About</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+        <h1> Layout Example</h1>
+        <a href="about.html"><img src="images/images.jpeg" alt="header"></a>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique velit blanditiis, reprehenderit ea ipsum
+            explicabo voluptates culpa accusamus vero distinctio aliquid laudantium atque, doloremque porro veritatis
+            unde hic iure harum?</p>
+
+    </header>
+
+    <aside>
+        <h2>aside</h2>
+        <img src="images/Screenshot_2022-01-30_at_3.21.50_PM_1500x.avif" alt="aside">
+    </aside>
+    <article>
+        <script>
+            google.charts.load('current', { 'packages': ['corechart'] });
+            google.charts.setOnLoadCallback(drawChart);
+
+            function drawChart() {
+                const data = google.visualization.arrayToDataTable([
+                    ['Contry', 'Mhl'],
+                    ['Italy', 54.8],
+                    ['France', 90.6],
+                    ['Spain', 44.4],
+                    ['USA', 23.9],
+                    ['Argentina', 14.5]
+                ]);
+
+                // Set Options
+                const options = {
+                    title: 'World Wide Wine Production',
+                    is3D: true
+                };
+
+                // Draw
+                const chart = new google.visualization.PieChart(document.getElementById('myChart'));
+                chart.draw(data, options);
+
+            }
+
+        </script>
+        <div id="myChart" style="width:50vw; height:20vw; text-align: center; padding-top: 10px;">
+        </div>
+        
+    </article>
+    <footer>
+        <h2> Site Map </h2>
+    </footer>
+</body>
+
+</html>

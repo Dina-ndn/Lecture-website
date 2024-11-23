@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Basic Tags </title>
+</head>
+<body>
+    <h1> HTML Basic Tag (Day 1) </h1>
+    <h2> Paragraph, Abbrevation, Code </h2>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt tempore itaque nobis veritatis sint modi nihil inventore exercitationem, non, illo quam hic accusamus. In fuga perferendis sunt omnis amet possimus!
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. At voluptatem sit adipisci tenetur labore soluta nobis harum enim explicabo! Sed ad debitis adipisci unde quidem quaerat quasi in officia autem.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ex qui atque dolorum eos ipsam nobis iure! Magni tempora, animi voluptatum ipsam voluptatibus in reprehenderit esse aperiam soluta, eum fugiat!
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur eos voluptates placeat voluptas ducimus perspiciatis, iusto nemo suscipit repellendus quidem illo natus nisi, pariatur maiores dolor? Voluptates error doloribus pariatur.
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur quidem ipsa accusamus sint explicabo, pariatur commodi eius quae doloremque non magni quaerat velit illum, vel, dolorem voluptatibus tenetur repellendus officia!
+    </p>
+    <pre>
+        My Bonnie lies over the ocean.
+
+  My Bonnie lies over the sea.
+
+  My Bonnie lies over the ocean.
+
+  Oh, bring back my Bonnie to me.
+    </pre>
+    
+    <p>
+        <dfn><abbr title="HyperText Markup Language">HTML</abbr></dfn>
+        is a computer language used to structure web-based content.
+    </p>
+
+
+    <p>Hey, luvvr, let's talk about the <code>code</code> tag.</p>
+<p>Click the button to create a CODE element with some text.</p>
+<button onclick="myFunction()">Try it</button><br><br>
+       <script>
+           function myFunction() {
+               var x = document.createElement("code");
+               var t = document.createTextNode("A piece of computer code");
+               x.appendChild(t);
+               document.body.appendChild(x);
+
+               var a = document.createElement("p");
+               var b = document.createTextNode("A piece of paragraph");
+               a.appendChild(b);
+               document.body.appendChild(a);}
+       </script>
+
+</body>
+</html>
